@@ -12,7 +12,10 @@ store.dispatch(getCountries());
 
 render(
     <Provider store={store}>
-        <Router history={hashHistory} routes={routes}/>
+        <div>
+            <DevTools />
+            <Router history={hashHistory} routes={routes}/>
+        </div>       
     </Provider>,
     document.getElementById('root')
 );
